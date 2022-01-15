@@ -1,0 +1,255 @@
+#grilla {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 200px 100px 500px 450px 100px;
+    grid-template-areas: "header header"
+        "nav nav"
+        "main main "
+        "section section"
+        "footer footer";
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    background: #360033;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #360033, #0b8793);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #360033, #0b8793);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    font-family: roboto;
+
+    header {
+
+        grid-area: header;
+
+    }
+
+    nav {
+        grid-area: nav;
+
+    }
+
+    main {
+
+        grid-area: main;
+    }
+
+    section {
+        grid-area: section;
+    }
+
+    footer {
+        grid-area: footer;
+    }
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    a {
+        text-decoration: none;
+    }
+}
+
+/*Nav*/
+
+.nav-link {
+    transition: all 0.3s linear !important;
+
+    &:hover {
+        color: #40B9A5 !important;
+    }
+}
+
+.spanN {
+    color: white;
+    font-size: 50px;
+    transition: all 0.3s linear;
+
+    &:hover {
+        color: #40B9A5;
+    }
+}
+
+.spanR {
+    color: #40B9A5;
+    font-size: 50px;
+}
+
+/*Content main*/
+
+.content {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 200px;
+    font-size: 70px;
+
+    h1 {
+        margin-left: -.4em;
+        font-size: 60px;
+        text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+
+        span {
+            color: #40B9A5;
+        }
+    }
+
+
+    .barraVerde {
+        width: 100px;
+        margin-left: 50px;
+    }
+
+}
+
+.content {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        background: #4ECDC4;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #556270, #4ECDC4);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #556270, #4ECDC4);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        top: 10;
+        left: 30;
+
+        z-index: -1;
+        animation: burbuja 3s linear infinite alternate;
+    }
+}
+
+/*Section*/
+
+section {
+    padding: 4em 2em;
+    text-align: center;
+
+    .introduc {
+        color: #40B9A5;
+        text-decoration: none;
+    }
+
+    h2 {
+        color: white;
+    }
+
+    p {
+        color: white;
+    }
+}
+
+/*Animacion esfera*/
+
+.featured {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: #feab5e9c;
+        /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #4bc0c8cb, #c779d0cb, #feab5ebb);
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #4bc0c8af, #c779d0b0, #feab5ea2);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        top: 0;
+        left: 20;
+        z-index: -1;
+        animation: burbuja 3s linear infinite alternate;
+    }
+
+}
+
+@keyframes burbuja {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(2rem);
+    }
+}
+
+/*Footer*/
+
+footer {
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.social-header {
+    margin-right: 30px !important;
+    margin-top: 25px;
+
+    ul {
+        display: flex;
+        justify-content: space-evenly;
+
+        a {
+            color: white;
+        }
+    }
+}
+
+.fa-instagram {
+
+    transition: all 0.3s linear;
+
+    &:hover {
+        color: #40B9A5;
+    }
+}
+
+.fa-twitter {
+    @extend .fa-instagram;
+
+}
+
+.fa-github {
+    @extend .fa-instagram;
+
+}
+
+.textoFooter {
+    a {
+        text-decoration: none;
+    }
+
+    p {
+        text-align: center;
+        color: grey;
+        transition: all 0.3s linear;
+        margin-top: 46px;
+        font-size: 15px;
+        text-decoration: none;
+
+        &:hover {
+            color: #40B9A5;
+        }
+    }
+}
