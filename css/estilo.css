@@ -59,14 +59,14 @@ ul {
   width: 200px;
   font-size: 70px; }
   .content h1 {
-    margin-left: -.1em;
+    margin-left: -.0,5em;
     font-size: 50px;
     text-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5); }
     .content h1 span {
       color: #40B9A5; }
   .content .barraVerde {
     width: 100px;
-    margin-left: 50px; }
+    margin-left: 55px; }
 
 .content {
   position: relative; }
