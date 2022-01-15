@@ -131,7 +131,8 @@ section {
 footer {
   color: white;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  background-color: red; }
 
 .social-header {
   margin-right: 1rem !important;
